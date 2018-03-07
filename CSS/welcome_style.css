@@ -3,12 +3,12 @@
 */
 
 h3 {
-    color: blue;
+    color: #00008b;
     text-decoration: underline;
 }
 
 ul {
-    list-style: lower-greek;
+    list-style: lower-alpha;
 }
 
 table {
@@ -22,13 +22,14 @@ td, tr {
 }
 
 body {
+    margin: 10em;
     background: azure;
     background-image: url(Backgrounds/intersection/intersection.png);
     font-family: Georgia, sans-serif;
 }
 
 .fancy-header {
-    color: purple; /* single line comment */
+    color: black;
     text-decoration: underline;
     text-align: center;
 }
