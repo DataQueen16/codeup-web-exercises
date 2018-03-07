@@ -1,10 +1,38 @@
 /*
-multi
-line
-comment
+* This is still the Veridian Dynamics stylesheet
 */
+
+h3 {
+    color: blue;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: lower-greek;
+}
+
+table {
+    font-size: x-large;
+    padding: 2em;
+}
+
+td, tr {
+    font-size: large;
+    padding: 1em;
+}
+
+body {
+    background: azure;
+    background-image: url(Backgrounds/intersection/intersection.png);
+    font-family: Georgia, sans-serif;
+}
 
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
 }
+
+
+
+
