@@ -8,18 +8,15 @@ h3 {
 }
 
 ul {
-    list-style: lower-alpha;
+    list-style: lower-greek;
 }
 
-table {
-    font-size: x-large;
-    padding: 2em;
-}
-
-td, tr {
-    font-size: large;
+table, td, tr, th {
+    border: 1px darkblue solid;
+    font-size: medium;
     padding: 1em;
 }
+
 
 body {
     margin: 10em;
@@ -34,6 +31,17 @@ body {
     text-align: center;
 }
 
+a:linked {
+    color: #purple;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+a:visited {
+    color: green;
+}
 
 
 
