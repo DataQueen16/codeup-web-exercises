@@ -6,6 +6,7 @@
     font-weight: bold;
     color: white;
     margin: 10px 40px 10px 10px;
+    position: relative;
 }
 
 h1 {
@@ -16,13 +17,12 @@ h1 {
 
 #red{
     background: red;
-    background-image: url(../img/codeup-arrow.png);
-    background-repeat: no-repeat;
-    background-position: top right;
+    position: relative;
 }
 
 #orange{
     background: orange;
+    position: clear;
 }
 
 #yellow{
@@ -39,4 +39,10 @@ h1 {
 
 #deepink{
     background: deeppink;
+}
+
+.arrow {
+    position: absolute;
+    top: -40px;
+    right: -40px;
 }
