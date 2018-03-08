@@ -7,6 +7,11 @@
     color: white;
     margin: 10px 40px 10px 10px;
     position: relative;
+    float: left;
+}
+
+.box:nth-child(5) {
+    clear: left;
 }
 
 h1 {
@@ -17,12 +22,10 @@ h1 {
 
 #red{
     background: red;
-    position: relative;
 }
 
 #orange{
     background: orange;
-    position: clear;
 }
 
 #yellow{
