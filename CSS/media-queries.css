@@ -1,19 +1,7 @@
-
-
-/* screen sizes 500px and up */
-@media screen and (min-width:339px) {
-    .hidden-on-desktop {
-
-    }
-
     .header-img img{
         width: 100%;
         max-width: available;
         }
-
-    .alert-info a {
-        text-align: center;
-    }
 
     .alert-info {
         display: block;
@@ -25,6 +13,7 @@
         margin: 20px;
         font-size-adjust: auto;
         text-align: center;
+        -moz-text-size-adjust: auto;
     }
 
     p {
@@ -64,6 +53,15 @@
     section:not(.main) {
         font-style: italic;
     }
+
+    footer {
+
+    }
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) {
+
+
 }
 
 
