@@ -1,15 +1,69 @@
 
-/*div class*/
-.alert-info {
 
+/* screen sizes 500px and up */
+@media screen and (min-width:339px) {
+    .hidden-on-desktop {
+
+    }
+
+    .header-img img{
+        width: 100%;
+        max-width: available;
+        }
+
+    .alert-info a {
+        text-align: center;
+    }
+
+    .alert-info {
+        display: block;
+        background: aqua;
+        border: solid lightgrey;
+        text-decoration: none;
+        height: 100px;
+        width: auto;
+        margin: 20px;
+        font-size-adjust: auto;
+        text-align: center;
+    }
+
+    p {
+        padding-bottom: 40px;
+    }
+
+    ul {
+        list-style-type: none;
+        line-height: 500%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    li a {
+        -moz-text-size-adjust: auto;
+        display: block;
+        background-color: lightgrey;
+        text-decoration: none;
+        position: relative;
+        margin: 25px;
+    }
+
+    li a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: x-large;
+        display: block;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    section:not(.main) {
+        font-style: italic;
+    }
 }
 
-.hidden-on-desktop {
 
-}
-
-
-/*ul class*/
-.nav-links {
-
-}
