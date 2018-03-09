@@ -1,3 +1,9 @@
+
+/** {
+    margin: 0;
+    padding: 0;
+}*/
+
     .header-img img{
         width: 100%;
         max-width: available;
@@ -14,6 +20,11 @@
         font-size-adjust: auto;
         text-align: center;
         -moz-text-size-adjust: auto;
+    }
+
+    .alert-info>a {
+        color: #000;
+        text-decoration: none;
     }
 
     p {
@@ -44,13 +55,12 @@
 
     h1 {
         margin-bottom: 15px;
-        font-size: x-large;
         display: block;
         text-align: center;
-        padding-bottom: 50px;
+        padding-bottom: 40px;
     }
 
-    section:not(.main) {
+    .sub-section {
         font-style: italic;
     }
 
