@@ -5,17 +5,18 @@
     }
 
     .header-img img{
+        width: 100%;
         }
 
     .alert-info {
         display: block;
-        background: aqua;
         border: solid lightgrey;
         text-decoration: none;
         height: 100px;
         margin: 20px;
         text-align: center;
         font-size: 100%;
+        background-color: darkturquoise;
     }
 
 
@@ -71,7 +72,7 @@
     }
 
 /* Large devices (large desktops, 1200px and up) */
-@media screen and (min-width:1200px) {
+@media screen and (min-width:768px) {
 
     h1 {
         float: left;
