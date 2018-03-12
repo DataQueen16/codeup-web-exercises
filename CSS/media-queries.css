@@ -112,12 +112,19 @@
         color: #fff;
     }
 
+    .header-img img{
+        position: relative;
+    }
+
     .main {
         float: left;
     }
 
     .sub-section {
         float: left;
+    }
+
+    footer {
         clear: both;
     }
 
