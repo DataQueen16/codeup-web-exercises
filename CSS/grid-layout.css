@@ -11,7 +11,6 @@
     }
 
     .outline {
-        border: 1px solid black;
         float: left;
         color: white;
         padding: 10px;
@@ -27,26 +26,21 @@
     }
 
     .col-1-half {
-        background: darkblue;
         width: 50%;
     }
 
     .col-1-third {
-        background: rebeccapurple;
         width: 33.33%;
     }
 
     .col-1-fourth {
-        background: grey;
         width: 25%;
     }
 
     .col-1-sixth {
-        background: cornflowerblue;
         width: 16.6%;
     }
 
     .col-1-eighth {
-        background: mediumvioletred;
         width: 12.5%;
     }

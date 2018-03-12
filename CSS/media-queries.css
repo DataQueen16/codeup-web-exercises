@@ -5,8 +5,6 @@
     }
 
     .header-img img{
-        width: 100%;
-        max-width: available;
         }
 
     .alert-info {
@@ -15,7 +13,6 @@
         border: solid lightgrey;
         text-decoration: none;
         height: 100px;
-        width: auto;
         margin: 20px;
         text-align: center;
         font-size: 100%;
@@ -81,7 +78,6 @@
     }
 
     .icons {
-        width: 40px;
         height: 40px;
         padding: 0 5em;
     }
