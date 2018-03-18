@@ -2,146 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/custom.css">
     <title>Pizza World</title>
 </head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-secondary">Pizza World</button>
-                <button type="button" class="btn btn-secondary">Online Order</button>
-                <button type="button" class="btn btn-secondary">Menu</button>
-            </div>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <input type="text" class="form-control" placeholder="Zip Code" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                    <div class="input-group-text" id="btnGroupAddon">Search stores near you</div>
-                </div>
-                <div class="input-group-prepend col align-self-end">
-                    <div class="input-group-text" id="btnGroupAddon2">Sign Up</div>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-secondary">Pizza World</button>
+                        <button type="button" class="btn btn-secondary">Online Order</button>
+                        <button type="button" class="btn btn-secondary">Menu</button>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <input type="text" class="form-control" placeholder="Zip Code" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            <div class="input-group-text" id="btnGroupAddon">Search stores near you</div>
+                        </div>
+                        <div class="input-group-prepend col align-self-end">
+                            <div class="input-group-text" id="btnGroupAddon2">Sign Up</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="row jumbotron">
-        <h1 id="banner" class="display-4">Welcome to Pizza World</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="container">
-        <h2>Build your own pizza!</h2>
-
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#size" data-toggle="tab" role="tab" aria-controls="nav-size" aria-selected="true">
-                            <span class="badge badge-light">1</span>
-                            Size and crust</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cheese" data-toggle="tab" role="tab" aria-controls="nav-cheese" aria-selected="true">
-                            <span class="badge badge-light">2</span>
-                            Cheese and Sauce</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#toppings" data-toggle="tab" role="tab" aria-controls="nav-toppings" aria-selected="true">
-                            <span class="badge badge-light">3</span>
-                            Toppings</a>
-                    </li>
-                </ul>
+        <div class="container">
+            <div class="row jumbotron">
+                <h1 id="banner" class="display-4">Welcome to Pizza World</h1>
             </div>
-    </div>
-</div>
+        </div>
 
-            <div class="container tab-content" id="myTab">
-                    <div class="card">
-                        <h5 class="card-header p-3 mb-2 bg-info">Choose size and crust</h5>
-                        <div class="card-body" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
+        <div class="row">
+            <div class="container">
+                <h2>Build your own pizza!</h2>
+
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs active" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#size" data-toggle="tab" role="tab" aria-controls="nav-size" aria-selected="true">
+                                    <span class="badge badge-light">1</span>
+                                    Size and crust</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cheese" data-toggle="tab" role="tab" aria-controls="nav-cheese" aria-selected="true">
+                                    <span class="badge badge-light">2</span>
+                                    Cheese and Sauce</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#toppings" data-toggle="tab" role="tab" aria-controls="nav-toppings" aria-selected="true">
+                                    <span class="badge badge-light">3</span>
+                                    Toppings</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+                    <div class="container tab-content" id="myTab">
                             <div class="card">
-                                    <div class="card-body">
-                                        <ul class="nav nav-tabs list-group card-text">
-                                            <li class="list-group-item nav-link active">Hand Tossed</li>
-                                            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-                                            <li class="list-group-item">Small (10")</li>
-                                            <li class="list-group-item">Medium (12")</li>
-                                            </li>
-                                        </ul>
-                                    </div>
-                            <div>
+                                <h5 class="card-header p-3 mb-2 bg-info">Choose size and crust</h5>
+                                <div class="card-body" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
+                                    <div class="card">
+                                            <div class="card-body">
+                                                <ul class="nav nav-tabs list-group card-text">
+                                                    <li class="list-group-item nav-link active">Hand Tossed</li>
+                                                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                                                    <li class="list-group-item">
+                                                        <label><input type="radio" name="optradio">  Small (10")</label>
+                                                       </li>
+                                                    <li class="list-group-item">
+                                                        <label><input type="radio" name="optradio">  Medium (12")</label>
+                                                       </li>
+                                                </ul>
+                                            </div>
 
+                                    <div>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <ul class="list-group card-text">
+                                                    <li class="list-group-item">Crispy Thin</li>
+                                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy radio</li>
+                                                    <li class="list-group-item">
+                                                        <label>
+                                                            <input type="radio" name="optradio">  Medium (12")
+                                                        </label>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <label>
+                                                            <input type="radio" name="optradio"> Large (14")
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <!-- Next Step Button -->
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                    <!-- Cheese & Sauce Card -->
+                    <div class="container">
+                        <div class="card">
+
+                            <h5 class="card-header p-3 mb-2 bg-info">Choose cheese and sauce</h5>
+
+                            <div class="card-body">
                                 <div class="card">
                                     <div class="card-body">
                                         <ul class="list-group card-text">
-                                            <li class="list-group-item">Crispy Thin</li>
-                                            <li class="list-group-item">Thin enough for optimum crispy to crunchy radio</li>
-                                            <li class="list-group-item">Small (12")</li>
-                                            <li class="list-group-item">Large (14")</li>
-                                            </li>
+                                        <li class="list-group-item">
+
+                                            Cheese</li>
+                                        <li class="list-group-item">How much?</li>
+                                        <li class="list-group-item">Light</li>
+                                        <li class="list-group-item">Regular</li>
+                                        <li class="list-group-item">Normal</li>
+                                        <li class="list-group-item">Extra</li>
                                         </ul>
                                     </div>
-                                <div>
 
-                            <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
+                                        <ul class="list-group card-text">
+                                            <li class="list-group-item">
+
+                                                Sauce</li>
+                                            <li class="list-group-item">What type?</li>
+                                            <li class="list-group-item">Lightr</li>
+                                            <li class="list-group-item">Regular</li>
+                                            <li class="list-group-item">Normal</li>
+                                            <li class="list-group-item">Extra</li>
+                                        </ul>
+
+                                    <!-- Next Step Button -->
+                                    <div>
+                                    <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-            </div>
 
-            <div class="container">
-                <div class="card">
-                    <h5 class="card-header p-3 mb-2 bg-info">Choose cheese and sauce</h5>
-                    <div class="card-body">
+                    <div class="container">
                         <div class="card">
-                        <div class="card-body">
-                            <ul class="list-group card-text">
-                            <li class="list-group-item">
 
-                                Cheese</li>
-                            <li class="list-group-item">How much?</li>
-                            <li class="list-group-item">Lightr</li>
-                            <li class="list-group-item">Regular</li>
-                            <li class="list-group-item">Normal</li>
-                            <li class="list-group-item">Extra</li>
-                            </li>
-                            </ul>
+                            <h5 class="card-header p-3 mb-2 bg-info">Choose toppings</h5>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
+                            </div>
                         </div>
-                            <ul class="list-group card-text">
-                                <li class="list-group-item">
-
-                                    Sauce</li>
-                                <li class="list-group-item">What type?</li>
-                                <li class="list-group-item">Lightr</li>
-                                <li class="list-group-item">Regular</li>
-                                <li class="list-group-item">Normal</li>
-                                <li class="list-group-item">Extra</li>
-                                </li>
-                            </ul>
-                        <div>
-                        <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
                     </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="card">
-                    <h5 class="card-header p-3 mb-2 bg-info">Choose toppings</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
-                    </div>
-                </div>
-            </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+    </body>
 </html>
