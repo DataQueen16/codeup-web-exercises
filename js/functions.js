@@ -14,17 +14,14 @@
      * TODO:
      * Call the function 'sayHello' and pass your name as a string literal argument.
      * /
-    // function sayHello(name) {
-    //     return "Hello " + name;
-    // }
-    //
-    // var name = "Jennifer";
-    // sayHello(name);
-    // var helloMessage = console.log(sayHello(name));
-    //
-    // var myName = "Jennifer";
-    // sayHello(myName);
-    // var helloMessage = console.log(sayHello(myName));
+    function sayHello(name) {
+        return "Hello " + name;
+    }
+
+
+    var myName = "Jennifer";
+    sayHello(myName);
+    var helloMessage = console.log(sayHello(myName));
 
 
     /**
@@ -32,14 +29,16 @@
      * Create a function called 'isTwo' that takes a number as a parameter.
      * /
     //Random # generator now
-    // var random = Math.floor((Math.random() * 3) + 1);
-    //
-    // //var num = parseInt(prompt("What number do you want to enter?"));
-    //
-    // function isTwo(num) {
-    //     return num === 2;
-    // }
-    // console.log(isTwo(random));
+    var random = Math.floor((Math.random() * 3) + 1);
+
+    var num = parseInt(prompt("What number do you want to enter?"));
+
+    function isTwo(num) {
+        return num === 2;
+    }
+
+     console.log("random: " + random);
+     console.log("Result: " + isTwo(random));
 
 
     /**
@@ -51,42 +50,53 @@
     // var tipPercent = parseInt(prompt("What percentage do you want to use - 10%, 15%, or 20%?"));
     //
     //
-    // function calculateTip(billAmount, tipPercent) {
-    //     return billAmount * (tipPercent/100);
-    // }
-    //
-    // var finalTipAmount = (calculateTip(billAmount, tipPercent));
-    // console.log("Your total tip amount is: $" + finalTipAmount.toFixed(2));
+    function calculateTip(billAmount, tipPercent) {
+        return billAmount * (tipPercent/100);
+    }
+
+    var finalTipAmount = (calculateTip(billAmount, tipPercent));
+    console.log("Your total tip amount is: $" + finalTipAmount.toFixed(2));
 
 
     /**
      * TODO:
      * Create a function named `applyDiscount`.
      */
-    // alert("Let's figure out your discount!");
-    // var price = parseFloat(prompt("What is the cost of your item?"));
-    // var discountPercent = parseFloat(prompt("What is the discount today? \nHint - it needs to be a decimal between 0 and 1."));
-    //
-    // function applyDiscount(price, discountPercent) {
-    //     return price * discountPercent;
-    // }
-    //
-    // var totalDiscount = (applyDiscount(price, discountPercent));
-    // console.log("Your total discount will be $" + totalDiscount.toFixed(2));
+    alert("Let's figure out your discount!");
+    var price = parseFloat(prompt("What is the cost of your item?"));
+    var discountPercent = parseFloat(prompt("What is the discount today? \nHint - it needs to be a decimal between 0 and 1."));
 
+    function applyDiscount(price, discountPercent) {
+        return price * discountPercent;
+    }
+
+    var totalDiscount = (applyDiscount(price, discountPercent));
+    console.log("Your total discount will be $" + totalDiscount.toFixed(2));
+
+    /**
+     * Extra Functions:
+     * Write a function named identity that defines one parameter and returns the argument it was called with.
+     */
+    function identity(input) {
+        return input;
+    }
+
+    var input = prompt("Tell me something about yourself -");
+    var inputResult = identity(input);
+    console.log("I wonder why you decided to tell me this - " + inputResult);
 
     /**
      * Extra Functions:
      * Write a function named isOdd that accepts a number and returns true if the passed number is odd, otherwise false
      * @returns {boolean}
      */
-    // function isOdd(numOdd) {
-    //     return (num % 2) == 1;
-    // }
-    //
-    // var numOdd = parseInt(prompt("Enter an even or odd number please"));
-    // var oddNumber = (isOdd(numOdd));
-    // console.log("It is " + oddNumber + " that your number is Odd.");
+    function isOdd(numOdd) {
+        return (num % 2) == 1;
+    }
+
+    var numOdd = parseInt(prompt("Enter an even or odd number please"));
+    var oddNumber = (isOdd(numOdd));
+    console.log("It is " + oddNumber + " that your number is Odd.");
 
 
     /**
@@ -94,13 +104,13 @@
      * Write a function named isEven that accepts a number and returns true if the passed number is even, otherwise false
      * @returns {boolean}
      */
-    // function isEven(number) {
-    //     return (num % 2) == 0;
-    // }
-    //
-    // var number = parseInt(prompt("Enter an even or odd number please"));
-    // var evenNumber = (isEven(number));
-    // console.log("It is " + evenNumber + " that your number is Even.");
+    function isEven(number) {
+        return (num % 2) == 0;
+    }
+
+    var number = parseInt(prompt("Enter an even or odd number please"));
+    var evenNumber = (isEven(number));
+    console.log("It is " + evenNumber + " that your number is Even.");
 
 
     /**
@@ -160,10 +170,76 @@
      * Extra Functions:
      * Write a function named square that accepts a number and returns the number times itself
      */
-    function square(numSquare) {
+    // function square(numSquare) {
+    //     return numSquare * numSquare;
+    // }
+    //
+    // var numSquare = parseInt(prompt("Please provide a number:"));
+    // var squareTotal = (square(numSquare));
+    // console.log(numSquare + " squared = " + squareTotal);
 
+
+    /**
+     * Extra Functions:
+     * Write a function named cube that accepts a number and returns the number times itself times itself
+     */
+    // function cube(num3) {
+    //     return (num3 * num3 * num3);
+    // }
+    //
+    // var num3 = parseInt(prompt("Please type a number"));
+    // var numCubed = (cube(num3));
+    // console.log(num3 + " cubed = " + numCubed);
+
+    /**
+     * Extra Functions:
+     * Write a function named half that accepts a number and returns the number halved
+     */
+    // function half(numH) {
+    //     return numH/2;
+    // }
+    //
+    // var numH = parseInt(prompt("Please provide a number"));
+    // var numHalf = (half(numH));
+    // console.log(numH + " divided in half = " + numHalf);
+
+    /**
+     * Extra Functions:
+     * Write a function named double that accepts a number and returns the number doubled
+     */
+    // function double(num2) {
+    //     return num2 * 2;
+    // }
+    //
+    // var num2 = parseInt(prompt("Enter a number: "));
+    // var numDouble = (double(num2));
+    // console.log("Here is " + num2 + " doubled: " + numDouble);
+
+
+    /**
+     * Extra Functions:
+     * Write a function named isValidPassword that accepts a string and returns a boolean value based on the rules from the working with data types exercise
+     */
+    function isValidPassword(username, password) {
+        var isPasswordLongEnough = thePassword.length > 5;
+        var isUsernameShortEnough = username.length < 20;
+        var passwordIncludesUsername = thePassword.indexOf(username) != -1;
+        var usernameHasWhiteSpace = username !== username.trim();
+        var passwordHasWhiteSpace = password !== password.trim();
+
+        return (
+            isPasswordLongEnough &&
+            isUsernameShortEnough &&
+            ! passwordIncludesUsername &&
+            ! usernameHasWhiteSpace &&
+            ! passwordHasWhiteSpace
+        );
     }
 
+    var username = prompt("Enter your Username:");
+    var thePassword = prompt("Enter your password: ");
+    var validPassword = (isValidPassword(thePassword));
+    console.log("Did you follow the rules? " + validPassword);
 
 })();
 
