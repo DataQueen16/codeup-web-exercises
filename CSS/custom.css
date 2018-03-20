@@ -1,0 +1,17 @@
+
+
+
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    color: black;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#banner {
+    background-color: rgba(228, 228, 228, 0.35);
+}
+
+.footer {
+    float: right;
+}

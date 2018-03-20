@@ -1,8 +1,7 @@
 @media screen and (min-width:768px) {
     .col-1-third,
     .col-1-half {
-        width: 100%;
-
+        width: 90%;
     }
 
     .container {

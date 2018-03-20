@@ -64,14 +64,14 @@
             </div>
         </div>
 
-                    <div class="container tab-content" id="myTab">
+                    <div class="container tab-content">
                             <div class="card">
                                 <h5 class="card-header p-3 mb-2 bg-info">Choose size and crust</h5>
                                 <div class="card-body" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
                                     <div class="card">
                                             <div class="card-body">
-                                                <ul class="nav nav-tabs list-group card-text">
-                                                    <li class="list-group-item nav-link active">Hand Tossed</li>
+                                                <ul class="list-group card-text card-header">
+                                                    <li class="list-group-item">Hand Tossed</li>
                                                     <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
                                                     <li class="list-group-item">
                                                         <label><input type="radio" name="optradio">  Small (10")</label>
@@ -83,10 +83,9 @@
                                             </div>
 
                                     <div>
-
                                         <div class="card">
                                             <div class="card-body">
-                                                <ul class="list-group card-text">
+                                                <ul class="list-group card-text card-header">
                                                     <li class="list-group-item">Crispy Thin</li>
                                                     <li class="list-group-item">Thin enough for optimum crispy to crunchy radio</li>
                                                     <li class="list-group-item">
@@ -102,48 +101,71 @@
                                                 </ul>
                                                 <!-- Next Step Button -->
                                             </div>
-                                            <div>
+                                            <footer class="footer">
                                                 <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
-                                            </div>
+                                            </footer>
                                         </div>
                                     </div>
 
                     <!-- Cheese & Sauce Card -->
                     <div class="container">
                         <div class="card">
-
                             <h5 class="card-header p-3 mb-2 bg-info">Choose cheese and sauce</h5>
+                                <div class="card-body">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <ul class="list-group card-text card-header">
+                                                <li class="list-group-item">Cheese</li>
+                                                <li class="list-group-item">
+                                                    <form class="form-inline">
+                                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much?</label>
+                                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                            <option selected>Regular</option>
+                                                            <option value="1">Light</option>
+                                                            <option value="2">Normal</option>
+                                                            <option value="3">Extra</option>
+                                                        </select>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
-                            <div class="card-body">
                                 <div class="card">
                                     <div class="card-body">
-                                        <ul class="list-group card-text">
-                                        <li class="list-group-item">
-
-                                            Cheese</li>
-                                        <li class="list-group-item">How much?</li>
-                                        <li class="list-group-item">Light</li>
-                                        <li class="list-group-item">Regular</li>
-                                        <li class="list-group-item">Normal</li>
-                                        <li class="list-group-item">Extra</li>
-                                        </ul>
-                                    </div>
-
-                                        <ul class="list-group card-text">
+                                        <ul class="list-group card-text card-header">
+                                            <li class="list-group-item">Sauce</li>
                                             <li class="list-group-item">
-
-                                                Sauce</li>
-                                            <li class="list-group-item">What type?</li>
-                                            <li class="list-group-item">Lightr</li>
-                                            <li class="list-group-item">Regular</li>
-                                            <li class="list-group-item">Normal</li>
-                                            <li class="list-group-item">Extra</li>
+                                                 <form class="form-inline">
+                                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What Type?</label>
+                                                      <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                          <option selected>Marinara Sauce</option>
+                                                          <option value="1">Tomato Sauce</option>
+                                                          <option value="2">BBQ Sauce</option>
+                                                          <option value="3">Alfredo Sauce</option>
+                                                      </select>
+                                                 </form>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <form class="form-inline">
+                                                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much?</label>
+                                                       <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                                          <option selected>Normal</option>
+                                                          <option value="1">Light</option>
+                                                          <option value="2">Extra</option>
+                                                       </select>
+                                                </form>
+                                            </li>
                                         </ul>
-
-                                    <!-- Next Step Button -->
-                                    <div>
-                                    <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
                                     </div>
+                                </div>
+
+                                <!-- Next Step Button -->
+                                <footer class="footer">
+                                   <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Previous Step</a>
+                                   <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
+                                </footer>
+
                                 </div>
                             </div>
                         </div>
@@ -154,11 +176,47 @@
 
                             <h5 class="card-header p-3 mb-2 bg-info">Choose toppings</h5>
 
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary p-3 mb-2 bg-info">Next step</a>
-                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-group card-text card-header">
+                                        <li class="list-group-item">Choose Meats</li>
+                                        <li class="list-group-item form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="beef">  Beef</label>
+                                        </li>
+                                        <li class="list-group-item form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="ham">  Ham</label>
+                                        </li>
+                                        <li class="list-group-item form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="philly-steak">  Philly Steak</label>
+                                        </li>
+                                        <li class="list-group-item form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="bacon">  Bacon</label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <ul class="list-group card-text card-header">
+                                                <li class="list-group-item">Choose Non-Meats</li>
+                                                <li class="list-group-item">
+                                                    <label>
+                                                        <input type="radio" name="optradio">  Medium (12")
+                                                    </label>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <label>
+                                                        <input type="radio" name="optradio"> Large (14")
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <!-- Next Step Button -->
+                                        </div>
                         </div>
                     </div>
 

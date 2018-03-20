@@ -1,8 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    }
 
     .header-img img{
         width: 100%;
@@ -43,7 +39,7 @@
     li a {
         display: block;
         background-color: lightgrey;
-        text-decoration: none;
+        text-decoration: underline;
         position: relative;
         margin: 25px;
         font-size: 2em;
