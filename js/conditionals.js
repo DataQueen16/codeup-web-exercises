@@ -1,117 +1,160 @@
 "use strict";
 
-/**
- * TODO:
- * Write some JavaScript that uses a `confirm` dialog to ask the user if they
- * would like to enter a number. If they click 'Ok', prompt the user for a
- * number, then use 3 separate alerts to tell the user:
- *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
- *
- * if what the user enters is not a number, use an alert to tell them that, and
- * do *not* display any of the above information.
- *
- * Can you refactor your code to use functions?
- */
-
 (function () {
 
-    console.log(confirm("Would you like to enter a number?"));
+    /**
+     * TODO: #1
+     * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+     * would like to enter a number. If they click 'Ok', prompt the user for a
+     * number, then use 3 separate alerts to tell the user:
+     *
+     * - whether the number is even or odd
+     * - what the number plus 100 is
+     * - if the number is negative or positive
+     *
+     * if what the user enters is not a number, use an alert to tell them that, and
+     * do *not* display any of the above information.
+     *
+     * Can you refactor your code to use functions?
+     */
 
-    if (console.log(confirmed)){
-        var num = parseInt(prompt("What number do you have for me?"));
-            if ((num = parseFloat(num))) {
-                if (num % 2 = 1) {
-                    console.log(alert(num + " is an odd number"));
-                } else {
-                    console.log(alert(num + " is an even number"));
-                }
+    // var answer = confirm("Would you like to enter a number?");
+    //
+    // if (answer === true){
+    //     var num = parseInt(prompt("What number do you have for me?"));
+    //         if ((num === parseFloat(num))) {
+    //             if (num % 2 === 0) {
+    //                 console.log(alert(num + " is an even number"));
+    //             } else {
+    //                 console.log(alert(num + " is an odd number"));
+    //             }
+    //
+    //             console.log(alert(num + " + 100 = " + (num + 100)));
+    //
+    //             if (num >= 0) {
+    //                 console.log(alert(num + " is a positive number."));
+    //             } else {
+    //                 console.log(alert(num + " is a negative number"));
+    //             }
+    //         } else {
+    //             console.log(alert("I am sorry, that is an invalid answer. I need a number. Thanks for your time."));
+    //         }
+    // } else {
+    //     console.log(alert("Thanks for your time. See you again soon."));
+    // }
 
-                console.log(alert(num + " + 100 = " + (num + 100)));
 
-                if (num >= 0) {
-                    console.log(alert(num + " is a positive number."));
-                } else {
-                    console.log(alert(num + " is a negative number"));
-                }
-            } else {
-                console.log(alert("I am sorry, that is an invalid answer. I need a number. Thanks for your time."));
-            }
-    } else {
-        console.log(alert("Thanks for your time. See you again soon."));
-    }
-
-}) ();
-
-
-/* ########################################################################## */
-
-/**
- * TODO:
- * Create a function named `analyzeColor` that accepts a string that is a color
- * name as input. This function should return a message that related to that
- * color. Only worry about the colors defined above, if the color passed is not
- * one of the ones defined above, return a message that says so
- *
- * Example:
- *  > analyzeColor('blue') // returns "blue is the color of the sky"
- *  > analyzeColor('red') // returns "Strawberries are red"
- *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
- *
- * You should use an if-else-if-else block to return different messages.
- *
- * Test your function by passing various string literals to it and
- * console.logging the function's return value
- */
+//---------------------------
+    /**
+     * TODO: #2
+     * Create a function named `analyzeColor` that accepts a string that is a color
+     * name as input. This function should return a message that related to that
+     * color. Only worry about the colors defined above, if the color passed is not
+     * one of the ones defined above, return a message that says so
+     *
+     * Example:
+     *  > analyzeColor('blue') // returns "blue is the color of the sky"
+     *  > analyzeColor('red') // returns "Strawberries are red"
+     *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+     *
+     * You should use an if-else-if-else block to return different messages.
+     *
+     * Test your function by passing various string literals to it and
+     * console.logging the function's return value
+     */
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color everytime the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
- * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message everytime you refresh the page
- */
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-/**
- * TODO:
- * Refactor your above function to use a switch-case statement
- */
 
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
 
-/* ########################################################################## */
+    // function analyzeColor(answer) {
+    //     switch(answer.toLowerCase()) {
+    //         case "red":
+    //             return console.log(alert("The Chinese consider red to be a lucky color."));
+    //         case "orange":
+    //             return console.log(alert("Orange is the color of the sun."));
+    //         case "yellow":
+    //             return console.log(alert("Yellow is warm and cozy and deserves a hug."));
+    //         case "green":
+    //             return console.log(alert("Green is the color of growth and spring."));
+    //         case "blue":
+    //             return console.log(alert("Blue is a cool color that calms the nerves and mind."));
+    //         case "indigo":
+    //             return console.log(alert("Indigo is a deep blue that brings strength and courage."));
+    //         case "violet":
+    //             return console.log(alert("Violet - deep violet - is my favorite color."));
+    //         default:
+    //             return console.log(alert("I am not familiar with that color - it is an invalid answer."))
+    //     }
+    // }
+    //
+    // var answer = prompt("Please enter a color to be analyzed.");
+    // var colorAnswer = (analyzeColor(answer));
+    // console.log(colorAnswer);
+    //
+    // console.log(analyzeColor(randomColor));
 
-/**
- * TODO:
- * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
- * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
- * all for free!.
- *
- * Write a function named `calculateTotal` that accepts a lucky number and total
- * amount, and returns the discounted price.
- *
- * Example:
- * calculateTotal(0, 100) // returns 100
- * calculateTotal(4, 100) // returns 50
- * calculateTotal(5, 100) // returns 0
- *
- * Test your function by passing it various values and checking for the expected
- * return value.
- */
+    /* ########################################################################## */
+    /**
+     * TODO:
+     * Refactor your above function to use a switch-case statement - DONE!!
+     */
+    /**
+     * TODO:
+     * Prompt the user for a color when the page loads, and pass the input from the
+     * user to your `analyzeColor` function. Alert the return value from your
+     * function to show it to the user.
+     */
+
+    /* ########################################################################## */
+
+    /**
+     * TODO:
+     * Pass the `randomColor` variable to your function and console.log the results.
+     * You should see a different message everytime you refresh the page
+     */
+
+//----------------------------------------------
+    /**
+     * TODO: #3
+     * Suppose there's a promotion in Walmart, each customer is given a randomly
+     * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
+     * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+     * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+     * all for free!.
+     *
+     * Write a function named `calculateTotal` that accepts a lucky number and total
+     * amount, and returns the discounted price.
+     *
+     * Example:
+     * calculateTotal(0, 100) // returns 100
+     * calculateTotal(4, 100) // returns 50
+     * calculateTotal(5, 100) // returns 0
+     *
+     * Test your function by passing it various values and checking for the expected
+     * return value.
+     */
+
+    function calculateTotal(luckyNumber, totalAmount) {
+        var discountedPrice = totalAmount - (totalAmount * luckynumber);
+        return discountedPrice;
+    }
+
+    var luckyNumber = parseInt(prompt("What is your lucky number today?"));
+    var totalAmount = parseFloat(prompt("What is the price of your product?"));
+    var grandTotal = (calculateTotal(luckyNumber, totalAmount));
+    console.log("Your final discounted price is $" + grandTotal);
+
+
+
+}) ();
+
 
 /**
  * TODO:
