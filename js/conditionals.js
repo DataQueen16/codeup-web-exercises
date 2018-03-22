@@ -73,32 +73,32 @@
 
 
 
-    // function analyzeColor(answer) {
-    //     switch(answer.toLowerCase()) {
-    //         case "red":
-    //             return console.log(alert("The Chinese consider red to be a lucky color."));
-    //         case "orange":
-    //             return console.log(alert("Orange is the color of the sun."));
-    //         case "yellow":
-    //             return console.log(alert("Yellow is warm and cozy and deserves a hug."));
-    //         case "green":
-    //             return console.log(alert("Green is the color of growth and spring."));
-    //         case "blue":
-    //             return console.log(alert("Blue is a cool color that calms the nerves and mind."));
-    //         case "indigo":
-    //             return console.log(alert("Indigo is a deep blue that brings strength and courage."));
-    //         case "violet":
-    //             return console.log(alert("Violet - deep violet - is my favorite color."));
-    //         default:
-    //             return console.log(alert("I am not familiar with that color - it is an invalid answer."))
-    //     }
-    // }
-    //
-    // var answer = prompt("Please enter a color to be analyzed.");
-    // var colorAnswer = (analyzeColor(answer));
-    // console.log(colorAnswer);
-    //
-    // console.log(analyzeColor(randomColor));
+    function analyzeColor(answer) {
+        switch(answer.toLowerCase()) {
+            case "red":
+                return console.log(alert("The Chinese consider red to be a lucky color."));
+            case "orange":
+                return console.log(alert("Orange is the color of the sun."));
+            case "yellow":
+                return console.log(alert("Yellow is warm and cozy and deserves a hug."));
+            case "green":
+                return console.log(alert("Green is the color of growth and spring."));
+            case "blue":
+                return console.log(alert("Blue is a cool color that calms the nerves and mind."));
+            case "indigo":
+                return console.log(alert("Indigo is a deep blue that brings strength and courage."));
+            case "violet":
+                return console.log(alert("Violet - deep violet - is my favorite color."));
+            default:
+                return console.log(alert("I am not familiar with " + answer + " - it is an invalid answer."))
+        }
+    }
+
+    var answer = prompt("Please enter a color to be analyzed.");
+    var colorAnswer = (analyzeColor(answer));
+    console.log(colorAnswer);
+
+    console.log(analyzeColor(randomColor));
 
     /* ########################################################################## */
     /**
@@ -141,15 +141,38 @@
      * return value.
      */
 
-    function calculateTotal(luckyNumber, totalAmount) {
-        var discountedPrice = totalAmount - (totalAmount * luckynumber);
-        return discountedPrice;
+    function calculateTotal(luckyNumber, originalAmount) {
+        switch (luckyNumber) {
+            case 0:
+                return originalAmount;
+            case 1:
+                return originalAmount * .9;
+            case 2:
+                return originalAmount * .75;
+            case 3:
+                return originalAmount * .65;
+            case 4:
+                return originalAmount * .5;
+            case 5:
+                return 0;
+        }
+
     }
 
-    var luckyNumber = parseInt(prompt("What is your lucky number today?"));
-    var totalAmount = parseFloat(prompt("What is the price of your product?"));
-    var grandTotal = (calculateTotal(luckyNumber, totalAmount));
-    console.log("Your final discounted price is $" + grandTotal);
+
+    
+    // var luckyNumber = parseInt(prompt("What is your lucky number today?"));
+    // var originalAmount = parseFloat(prompt("What is the price of your product?"));
+    // var grandTotal = (calculateTotal(luckyNumber, originalAmount));
+    // console.log("Your final discounted price is $" + grandTotal);
+
+    var luckyNumber = Math.floor(Math.random() * 6);
+    alert("Your lucky number is " + luckyNumber);
+    var originalAmount = inputNumber("How much did you buy?");
+    alert("Your total before the discount is " + originalAmount);
+    var total = calculateTotal(luckyNumber, originalAmount);
+    alert("Your final discounted price is $" + total.toFixed(2));
+
 
 }) ();
 
