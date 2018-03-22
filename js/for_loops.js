@@ -14,6 +14,31 @@
     // 7 x 9 = 63
     // 7 x 10 = 70
 
+    var num = prompt("Please pick a positive number bewteen 1 and 10");
+
+    function showMultiplicationTable(num) {
+        for (var multiply = 1; multiply < 11; multiply++) {
+            var total = num * multiply;
+            console.log(num + " * " + multiply + " = " + total);
+        }
+
+    }
+
+    (showMultiplicationTable(num));
+
+
+    // Create a for loop that uses console.log to create the output shown below.
+    //
+    //
+    // 1
+    // 22
+    // 333
+    // 4444
+    // 55555
+    // 666666
+    // 7777777
+    // 88888888
+    // 999999999
 
 
 })();
