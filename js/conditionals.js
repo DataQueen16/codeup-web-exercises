@@ -160,7 +160,7 @@
     }
 
 
-    
+
     // var luckyNumber = parseInt(prompt("What is your lucky number today?"));
     // var originalAmount = parseFloat(prompt("What is the price of your product?"));
     // var grandTotal = (calculateTotal(luckyNumber, originalAmount));
