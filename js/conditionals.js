@@ -18,30 +18,30 @@
      * Can you refactor your code to use functions?
      */
 
-    // var answer = confirm("Would you like to enter a number?");
-    //
-    // if (answer === true){
-    //     var num = parseInt(prompt("What number do you have for me?"));
-    //         if ((num === parseFloat(num))) {
-    //             if (num % 2 === 0) {
-    //                 console.log(alert(num + " is an even number"));
-    //             } else {
-    //                 console.log(alert(num + " is an odd number"));
-    //             }
-    //
-    //             console.log(alert(num + " + 100 = " + (num + 100)));
-    //
-    //             if (num >= 0) {
-    //                 console.log(alert(num + " is a positive number."));
-    //             } else {
-    //                 console.log(alert(num + " is a negative number"));
-    //             }
-    //         } else {
-    //             console.log(alert("I am sorry, that is an invalid answer. I need a number. Thanks for your time."));
-    //         }
-    // } else {
-    //     console.log(alert("Thanks for your time. See you again soon."));
-    // }
+    var answer = confirm("Would you like to enter a number?");
+
+    if (answer === true){
+        var num = parseInt(prompt("What number do you have for me?"));
+            if ((num === parseFloat(num))) {
+                if (num % 2 === 0) {
+                    console.log(alert(num + " is an even number"));
+                } else {
+                    console.log(alert(num + " is an odd number"));
+                }
+
+                console.log(alert(num + " + 100 = " + (num + 100)));
+
+                if (num >= 0) {
+                    console.log(alert(num + " is a positive number."));
+                } else {
+                    console.log(alert(num + " is a negative number"));
+                }
+            } else {
+                console.log(alert("I am sorry, that is an invalid answer. I need a number. Thanks for your time."));
+            }
+    } else {
+        console.log(alert("Thanks for your time. See you again soon."));
+    }
 
 
 //---------------------------
@@ -150,8 +150,6 @@
     var totalAmount = parseFloat(prompt("What is the price of your product?"));
     var grandTotal = (calculateTotal(luckyNumber, totalAmount));
     console.log("Your final discounted price is $" + grandTotal);
-
-
 
 }) ();
 

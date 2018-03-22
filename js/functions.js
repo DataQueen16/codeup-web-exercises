@@ -118,13 +118,13 @@
      * Write a function named isPositive that returns true if the passed number is greater than 0
      * @returns {boolean}
      */
-    // function isPositive(posNumber) {
-    //     return posNumber > 0;
-    // }
-    //
-    // var posNumber = parseFloat(prompt("Please enter any number - positive or negative:"));
-    // var yesPositive = (isPositive(posNumber));
-    // console.log("Well, it's " + yesPositive + " that you gave me a positive number.");
+    function isPositive(posNumber) {
+        return posNumber > 0;
+    }
+
+    var posNumber = parseFloat(prompt("Please enter any number - positive or negative:"));
+    var yesPositive = (isPositive(posNumber));
+    console.log("Well, it's " + yesPositive + " that you gave me a positive number.");
 
 
     /**
@@ -144,76 +144,76 @@
      * Extra Functions:
      * Write a function named hasSpaces that accepts a string and returns true if the string contains any space characters
      */
-    // function hasSpaces(text) {
-    //     return text.indexOf(" ") >= 0;
-    // }
-    //
-    // var text = prompt("Please provide a word or sentence:");
-    // var result = (hasSpaces(text));
-    // console.log("Whitespaces included? " + result);
+    function hasSpaces(text) {
+        return text.indexOf(" ") >= 0;
+    }
+
+    var text = prompt("Please provide a word or sentence:");
+    var result = (hasSpaces(text));
+    console.log("Whitespaces included? " + result);
 
 
     /**
      * Extra Functions:
      * Write a function named isFive that accepts a number and returns true if the number is equal to 5
      */
-    // function isFive(numFive) {
-    //     return num === 5;
-    // }
-    //
-    // var numFive = parseInt(prompt("Please provide a number:"));
-    // var correct = (isFive(numFive));
-    // console.log("Value provided equals 5? " + correct);
+    function isFive(numFive) {
+        return numFive === 5;
+    }
+
+    var numFive = parseInt(prompt("Please provide a number:"));
+    var correct = (isFive(numFive));
+    console.log("Value provided equals 5? " + correct);
 
 
     /**
      * Extra Functions:
      * Write a function named square that accepts a number and returns the number times itself
      */
-    // function square(numSquare) {
-    //     return numSquare * numSquare;
-    // }
-    //
-    // var numSquare = parseInt(prompt("Please provide a number:"));
-    // var squareTotal = (square(numSquare));
-    // console.log(numSquare + " squared = " + squareTotal);
+    function square(numSquare) {
+        return numSquare * numSquare;
+    }
+
+    var numSquare = parseInt(prompt("Please provide a number:"));
+    var squareTotal = (square(numSquare));
+    console.log(numSquare + " squared = " + squareTotal);
 
 
     /**
      * Extra Functions:
      * Write a function named cube that accepts a number and returns the number times itself times itself
      */
-    // function cube(num3) {
-    //     return (num3 * num3 * num3);
-    // }
-    //
-    // var num3 = parseInt(prompt("Please type a number"));
-    // var numCubed = (cube(num3));
-    // console.log(num3 + " cubed = " + numCubed);
+    function cube(num3) {
+        return (num3 * num3 * num3);
+    }
+
+    var num3 = parseInt(prompt("Please type a number"));
+    var numCubed = (cube(num3));
+    console.log(num3 + " cubed = " + numCubed);
 
     /**
      * Extra Functions:
      * Write a function named half that accepts a number and returns the number halved
      */
-    // function half(numH) {
-    //     return numH/2;
-    // }
-    //
-    // var numH = parseInt(prompt("Please provide a number"));
-    // var numHalf = (half(numH));
-    // console.log(numH + " divided in half = " + numHalf);
+    function half(numH) {
+        return numH/2;
+    }
+
+    var numH = parseInt(prompt("Please provide a number"));
+    var numHalf = (half(numH));
+    console.log(numH + " divided in half = " + numHalf);
 
     /**
      * Extra Functions:
      * Write a function named double that accepts a number and returns the number doubled
      */
-    // function double(num2) {
-    //     return num2 * 2;
-    // }
-    //
-    // var num2 = parseInt(prompt("Enter a number: "));
-    // var numDouble = (double(num2));
-    // console.log("Here is " + num2 + " doubled: " + numDouble);
+    function double(num2) {
+        return num2 * 2;
+    }
+
+    var num2 = parseInt(prompt("Enter a number: "));
+    var numDouble = (double(num2));
+    console.log("Here is " + num2 + " doubled: " + numDouble);
 
 
     /**
