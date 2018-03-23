@@ -62,6 +62,15 @@
     // 88888888
     // 999999999
 
+    // for (var i = 1; i < 10; i++) {
+    //     var a = ' ';
+    //     for(var b = 1; b <= i; b++) {
+    //         var a = a + i;
+    //     }
+    //     console.log(a);
+    // }
+
+
 
     // 4.
     // Create a for loop that uses console.log to create the output shown below.
@@ -88,12 +97,12 @@
     // 10
     // 5
 
-    for (var i = 100; i > 0; i - 5) {
-        if (i > 0) {
-            console.log(i);
-        } else {
-            break;
-        }
-    }
+    // for (var i = 100; i > 0; i - 5) {
+    //     if (i > 0) {
+    //         console.log(i);
+    //     } else {
+    //         break;
+    //     }
+    // }
 
 })();
