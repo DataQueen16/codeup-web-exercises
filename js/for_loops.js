@@ -15,17 +15,17 @@
     // 7 x 9 = 63
     // 7 x 10 = 70
 
-    // var num = prompt("Please pick a positive number bewteen 1 and 10");
-    //
-    // function showMultiplicationTable(num) {
-    //     for (var multiply = 1; multiply < 11; multiply++) {
-    //         var total = num * multiply;
-    //         console.log(num + " * " + multiply + " = " + total);
-    //     }
-    //
-    // }
-    //
-    // (showMultiplicationTable(num));
+    var num = prompt("Please pick a positive number bewteen 1 and 10");
+
+    function showMultiplicationTable(num) {
+        for (var multiply = 1; multiply < 11; multiply++) {
+            var total = num * multiply;
+            console.log(num + " * " + multiply + " = " + total);
+        }
+
+    }
+
+    (showMultiplicationTable(num));
 
     // 2.
     // Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:
@@ -38,15 +38,15 @@
     //     ...
 
 
-    // for (var i = 1; i <= 10; i++) {
-    //     var random = Math.floor(Math.random() * 20) + 180;
-    //
-    //     if (random % 2 === 0) {
-    //         console.log(random + " is an even number.");
-    //     } else {
-    //         console.log(random + " is an odd number.");
-    //     }
-    // }
+    for (var i = 1; i <= 10; i++) {
+        var random = Math.floor(Math.random() * 20) + 180;
+
+        if (random % 2 === 0) {
+            console.log(random + " is an even number.");
+        } else {
+            console.log(random + " is an odd number.");
+        }
+    }
 
     // 3.
     // Create a for loop that uses console.log to create the output shown below.
@@ -62,13 +62,13 @@
     // 88888888
     // 999999999
 
-    // for (var i = 1; i < 10; i++) {
-    //     var a = ' ';
-    //     for(var b = 1; b <= i; b++) {
-    //         var a = a + i;
-    //     }
-    //     console.log(a);
-    // }
+    for (var i = 1; i < 10; i++) {
+        var a = ' ';
+        for(var b = 1; b <= i; b++) {
+            var a = a + i;
+        }
+        console.log(a);
+    }
 
 
 
@@ -97,12 +97,12 @@
     // 10
     // 5
 
-    // for (var i = 100; i > 0; i - 5) {
-    //     if (i > 0) {
-    //         console.log(i);
-    //     } else {
-    //         break;
-    //     }
-    // }
+    for (var i = 100; i > 0; i - 5) {
+        if (i > 0) {
+            console.log(i);
+        } else {
+            break;
+        }
+    }
 
 })();
