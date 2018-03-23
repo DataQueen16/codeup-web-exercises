@@ -40,6 +40,7 @@
         }
 
         if(numSold > allCones) {
+            console.log("I can't sell you " + numSold + " cones. I only have " + allCones + " cones left.");
             allCones -= allCones;
         } else {
             allCones -= numSold;

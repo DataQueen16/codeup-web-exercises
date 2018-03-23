@@ -20,7 +20,7 @@
     function showMultiplicationTable(num) {
         for (var multiply = 1; multiply < 11; multiply++) {
             var total = num * multiply;
-            console.log(num + " * " + multiply + " = " + total);
+            console.log(num + " x " + multiply + " = " + total);
         }
 
     }
@@ -39,7 +39,7 @@
 
 
     for (var i = 1; i <= 10; i++) {
-        var random = Math.floor(Math.random() * 20) + 180;
+        var random = Math.floor(Math.random() * 180) + 20;
 
         if (random % 2 === 0) {
             console.log(random + " is an even number.");
