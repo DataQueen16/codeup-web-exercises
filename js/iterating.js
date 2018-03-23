@@ -30,6 +30,23 @@
      * Refactor your above code to use a `forEach` loop
      */
 
+    // var names = ["Jackie", "Geoff", "George", "Jennifer"];
+    // console.log("There are " + names.length + " items in this array");
+    // console.log(names[0]);
+    // console.log(names[1]);
+    // console.log(names[2]);
+    // console.log(names[3]);
+    //
+    // for (var i = 0; i < names.length; i++) {
+    //     console.log(names[i]);
+    // }
+
+    // names.forEach(function (name, index) {
+    //     console.log(name);
+    //     console.log(index);
+    // });
+
+
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -43,5 +60,27 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+    var a = [1, 2, 3, 4, 5];
+    var b = [1, 2, 3, 4, 5];
+    var c = [1, 2, 3, 4, 5];
+
+    function first(array){
+        return console.log(array[0]);
+    }
+
+    (first(a));
+
+    function second(array){
+        return console.log(array[1]);
+    }
+
+    (second(b));
+
+    function third(array){
+        return console.log(array[4]);
+    }
+
+    (third(c));
 
 })();
