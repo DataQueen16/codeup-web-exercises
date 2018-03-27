@@ -30,11 +30,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    // person.sayHello = function () {
-    //     console.log("Hey there " + person.firstName + " " + person.lastName);
-    // }
-    //
-    // person.sayHello();
+    person.sayHello = function () {
+        console.log("Hey there " + person.firstName + " " + person.lastName);
+    }
+
+    person.sayHello();
 
 
     /** TODO:
@@ -51,20 +51,20 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
-    // shoppers.forEach(function(shopper, index) {
-    //         if (shopper.amount > 200) {
-    //             var finalCost = shopper.amount * .88;
-    //             return console.log(shoppers[0].name + " spent $" + shoppers[0].amount + " and got a 12% discount, giving a final total of  $" + finalCost);
-    //         } else {
-    //             return console.log(shoppers[0].name + " spent $" + shoppers[0].amount + " and got no discount, giving a final total of  $" + shoppers[0].amount);
-    //         }
-    // });
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper) {
+            if (shopper.amount > 200) {
+                var finalCost = shopper.amount * .88;
+                return console.log(shopper.name + " spent $" + shopper.amount.toFixed(2) + " and got a 12% discount, with a reduced total of  $" + finalCost.toFixed(2));
+            } else {
+                return console.log(shopper.name + " spent $" + shopper.amount.toFixed(2) + " and got no discount, giving a final price of  $" + shopper.amount.toFixed(2));
+            }
+    });
 
 
     /** TODO:
@@ -81,33 +81,47 @@
      */
 
     var books = [
-        {"title1": "Where the sidewalk ends"
+        {"title": "Where the sidewalk ends",
             "author": {
                 "firstName": "Shel",
                 "lastName": "Silverstein"
                 }
             },
-        {"title2": "Midnight in the Garden of Good and Evil"},
-        {"title3": "The Masque of Red Death"},
-        {"title4": "The Awakening"},
-        {"title5": "The Casque of Amontillado"}
+
+        {"title": "Midnight in the Garden of Good and Evil",
+            "author": {
+                "firstName": "John",
+                "lastName": "Berendt"
+                }
+            },
+
+        {"title": "The Masque of Red Death",
+            "author": {
+                "firstName": "Edgar Allen",
+                "lastName": "Poe"
+                }
+            },
+
+        {"title": "The Awakening",
+            "author": {
+                "firstName": "Kate",
+                "lastName": "Chopin"
+                }
+            },
+
+        {"title": "The Casque of Amontillado",
+            "author": {
+                "firstName": "Edgar Allen",
+                "lastName": "Poe"
+                }
+            }
         ];
 
-    // "title1".author.firstName = "Shel";
-    // "title1".author.lastName = "Silverstein";
-    //
-    // "title2".author.firstName = "John";
-    // "title2".author.lastName = "Berendt";
-    //
-    // "title3".author.firstName = "Edgar Allen";
-    // "title3".author.lastName = "Poe";
-    //
-    // "title4".author.firstName = "Kate";
-    // "title4".author.lastName = "Chopin";
-    //
-    // "title5".author.firstName = "Edgar Allen";
-    // "title5".author.lastName = "Poe";
-
+    books.forEach(function(book, i) {
+        console.log("Book # " + (i + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    });
 
     /**
      * TODO:
@@ -116,8 +130,9 @@
      * - the book number (use the index of the book in the array)
      * - the book title
      * - author's full name (first name + last name)
-     *
-     * Example Console Output:
+     */
+
+    /* Example Console Output:
      *
      *      Book # 1
      *      Title: The Salmon of Doubt
@@ -144,5 +159,38 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    var books = [
+        createBook("Where the sidewalk ends", "Shel Silverstein"),
+
+        createBook("Midnight in the Garden of Good and Evil", "John Berendt"),
+
+        createBook("The Masque of Red Death", "Edgar Allen Poe"),
+
+        createBook("The Awakening", "Kate Chopin"),
+
+        createBook("The Casque of Amontillado", "Edgar Allen Poe")
+            ];
+
+    function createBook(title, author){
+        var name = author.split(" ");
+        return {title: title, author: {
+            firstName[0],
+                lastName: name[1]
+            }
+        };
+    }
+
+    function showBookInfo(book, index) {
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log('---------');
+    }
+
+    books.forEach(showBookInfo); //Not calling function myself, just passing it
+    //books.forEach(function() {});  -- same as above
+
+
 
 })();

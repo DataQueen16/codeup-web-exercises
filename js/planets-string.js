@@ -33,6 +33,6 @@
      planetsArray.join("<ul>");
      planetsArray.join("</ul>");
      planetsArray.join("<li>");
-     document.write(planetsArray);
+     document.write('<ul><li>planetsArray);
 
 })();
