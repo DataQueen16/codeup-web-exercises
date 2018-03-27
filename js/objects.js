@@ -176,7 +176,7 @@
         var name = author.split(" ");
         return {title: title, author: {
             firstName[0],
-                lastName: name[1]
+                lastName: name[0]
             }
         };
     }
