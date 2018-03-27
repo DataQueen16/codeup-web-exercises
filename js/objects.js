@@ -191,6 +191,7 @@
     books.forEach(showBookInfo); //Not calling function myself, just passing it
     //books.forEach(function() {});  -- same as above
 
-
+    books.push(createBook("Where the sidewalk ends", "Shel Silverstein"));
+    books[4] = createBook("The Raven", "Edgar Allen Poe");  //Reassigning one element in an array
 
 })();
