@@ -38,26 +38,32 @@
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.backgroundColor = "blue";
+        subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
 
-        // for (var i = 0; i < listItems.length; i++) {
-        //     var dbId = listItems[i].getAttribute("data-dbid");
-        //     console.log(dbId);
-        // }
+        for (var i = 0; i < listItems.length; i++) {
+            var dbId = listItems[i].getAttribute("data-dbid");
+            console.log(dbId);
+        }
 
         // TODO: Set text color on every other list item to grey
 
         for (var i = 0; i < listItems.length; i += 2){
-            listItems[i].style.color = "grey";
+            listItems[i].style.color = "magenta";
             }
 
 
         // TODO: Set text color of li with dbid = 1 to blue
 
         listItems[0].style.color = "blue";
+
+        for (i = 0; i < listItems.length; i++) {
+            if(listItems[i].getAttribute("data-dbid") === 1) {
+
+            }
+        }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
