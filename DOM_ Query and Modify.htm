@@ -25,20 +25,41 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id ="btn1">JavaScript will now be cool</button><br>
+<button id ="btn2">Set text of subHeader to blue</button><br>
+<button id ="btn3">Set text color on every other list item to grey</button><br>
+<button id ="btn4">Set text color of li with dbid = 1 to blue</button><br>
+<button id ="btn5">Change the text in the first sub paragraph to "Mission Accomplished!"</button>
+
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        'use strict';
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+        // 1. TODO: Uncomment next line and get the main header element by id
+        //    TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        var listener1 = function (event) {
+            var mainHeader = document.getElementById("main-header");
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", listener1);
+
+
+        // 2. TODO: Uncomment the next line and get the sub header element by id
+        //    TODO: Set the text color of subHeader to blue
+
+        var listener2 = function (event) {
+            var subHeader = document.getElementById("sub-header");
+            subHeader.style.color = "blue";
+        }
+
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", listener2);
+
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
@@ -48,23 +69,39 @@
             console.log(dbId);
         }
 
-        // TODO: Set text color on every other list item to grey
 
-        for (var i = 0; i < listItems.length; i += 2){
-            listItems[i].style.color = "magenta";
+        // 3. TODO: Set text color on every other list item to grey
+
+        var listener3 = function (event) {
+            var listItems = document.getElementsByTagName("li");
+
+            for (var i = 0; i < listItems.length; i += 2){
+                listItems[i].style.color = "gray";
             }
+        }
+
+        var btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", listener3);
+
+
 
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        listItems[0].style.color = "blue";
-
-        for (i = 0; i < listItems.length; i++) {
-            var dbId = listItems[i].getAttribute("data-dbid");
-            if (dbid === '1') {
-                listItems[i].style.color = "blue";
+        var listener4 = function (event) {
+            console.log("Call listener4 function")
+            var listItems = document.getElementsByTagName("li");
+            for (i = 0; i < listItems.length; i++) {
+                var dbId = listItems[i].getAttribute("data-dbid");
+                if (dbId === '1') {
+                    listItems[i].style.color = "blue";
+                }
             }
         }
+
+        var btn4 = document.getElementById("btn4");
+        btn4.addEventListener("click", listener4);
+
 
 
 
@@ -72,7 +109,14 @@
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
+
+        var listener5 = function (event) {
+            var subParagraphs = document.getElementsByClassName("sub-paragraph");
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        }
+
+        var btn5 = document.getElementById("btn5");
+        btn5.addEventListener("click", listener5);
 
         subParagraphs = Array.from("sub-paragraphs");
 
