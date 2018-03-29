@@ -60,16 +60,32 @@
         listItems[0].style.color = "blue";
 
         for (i = 0; i < listItems.length; i++) {
-            if(listItems[i].getAttribute("data-dbid") === 1) {
-
+            var dbId = listItems[i].getAttribute("data-dbid");
+            if (dbid === '1') {
+                listItems[i].style.color = "blue";
             }
         }
+
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerText = "Mission Accomplished!";
+
+        subParagraphs = Array.from("sub-paragraphs");
+
+        // Target the element on a page specifically without a class or id
+        // Use element in the console
+        // Click on the element itself
+        // Then in inspector right-click
+        // Click on copy, right-click
+        // Copy elment & it'll show up on your clipboard
+        //querySelector is for 1 element
+        //querySelector is for more than 1 element
+
+        document.querySelector("body > div > main > div > div.md-content > article > p: nth-child(17)");
     })();
 </script>
 </body>
