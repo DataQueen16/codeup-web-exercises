@@ -45,11 +45,6 @@
                 // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
                 map.setZoom(14);
 
-                var marker = new google.maps.Marker({
-                    position: results[0].geometry.location,
-                    map: map
-                });
-
                 // var info = new google.maps.InfoWindow({
                 //     content: "Tong's Thai Restaurant <br>1146 Austin Hwy, San Antonio, TX 78209 <br>I love this restaurant because it is good, <br>there is so much                    I can actually eat here and <br>the spicy food is spicy with some heat and not just intensity. <br>The best dish I have had is a spicy soup                          dish."
                 // });
@@ -59,11 +54,26 @@
                 // marker is clicked, the info window will open.
                 google.maps.event.addListener(marker,'click',function() {
                     var infoWindow = new google.maps.InfoWindow({
-                        content: "Tong's Thai Restaurant <br>1146 Austin Hwy, San Antonio, TX 78209 <br>I love this restaurant because it is good, <br>there is so much I can actually eat here and <br>the spicy food is spicy with some heat and not just intensity. <br>The best dish I have had is a spicy soup dish."
+                        content: "Tong's Thai Restaurant"
                     });
-
                     infoWindow.open(map,marker);
                     });
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP,
+                    position: results[0].geometry.location,
+                });
+                marker.addListener('click', toggleBounce);
+
+                function toggleBounce() {
+                    if (marker.getAnimation() !== null) {
+                        marker.setAnimation(null);
+                    } else {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                    }
+                }
 
             } else {
                 alert("Geocoding was not successful - STATUS: " + status);
