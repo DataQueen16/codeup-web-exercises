@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps</title>
+
+    <style>
+        #map-canvas {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map-canvas"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUASHijA27_IHTXxP56XXC0NXI-0ggpvU&callback=initMap"></script>
+
+    <script>
+        var mapOptions = {
+            zoom: 5,
+            center: {
+                lat: 29.426791,
+                lng: -98.489602
+            },
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+        var geocoder = new google.maps.Geocoder();
+
+        var address = {
+            address: "1146 Austin Hwy, San Antonio, TX 78209"
+
+        };
+        
+    //    function
+        function callback(results, status) {
+
+            if (status === google.maps.GeocoderStatus.OK){
+                console.log(results[0].geometry.location);
+                map.setCenter(results[0].geometry.location);
+                // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+                map.setZoom(14);
+
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map
+                });
+
+                // var info = new google.maps.InfoWindow({
+                //     content: "Tong's Thai Restaurant <br>1146 Austin Hwy, San Antonio, TX 78209 <br>I love this restaurant because it is good, <br>there is so much                    I can actually eat here and <br>the spicy food is spicy with some heat and not just intensity. <br>The best dish I have had is a spicy soup                          dish."
+                // });
+                // info.open(map, marker);
+
+                // Attaches an info window to a marker with the provided message. When the
+                // marker is clicked, the info window will open.
+                google.maps.event.addListener(marker,'click',function() {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: "Tong's Thai Restaurant <br>1146 Austin Hwy, San Antonio, TX 78209 <br>I love this restaurant because it is good, <br>there is so much I can actually eat here and <br>the spicy food is spicy with some heat and not just intensity. <br>The best dish I have had is a spicy soup dish."
+                    });
+
+                    infoWindow.open(map,marker);
+                    });
+
+            } else {
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+
+            var restaurants = [
+                {address: "9921 Frontage Rd, San Antonio, TX, 78230"},
+                {address: "22410 US Hwy 281 N, San Antonio, TX, 78259"},
+                {address: "849 E Commerce St, San Antonio, TX, 78205"}
+            ];
+
+            restaurants.forEach(function (address){
+                //setInterval instead of foreach
+                geocoder.geocode(address, function (results, status) {
+                    callback(results, status, address);
+                });
+            });
+
+
+        }
+
+
+
+        geocoder.geocode(address, callback);
+    </script>
+</body>
+</html>
