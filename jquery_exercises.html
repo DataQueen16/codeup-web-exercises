@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery Exercises</title>
+    <style type="text/css">
+        h1, h2 {
+            font-family: fantasy;
+        }
+    </style>
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    <div class="codeup" id="title">
+        <h1 class="monkey" id="stinky">Monkeys are fabulously stinky!</h1>
+    </div>
 
+    <div class="Monkeys" id="escape">
+        <p class="monkey-escape" id="poo-shower">
+            Thanks to the local zoo fiasco, there are a series of monkeys hanging out in trees around town. Each monkey seems to be too high up for the zoo keepers to catch yet not too high that they can't throw their poo at local passersby. Additionally, these monkeys are raiding trash cans, breaking into store fronts, and opening windows that are not latched. Homeowners have come home to monkey tea parties and monkey fashion shows using their best clothing.
+        </p>
+
+        <p class="giraffes" id="park">
+            Once the monkeys got free, the giraffes were next. They are larger and easier to spot, but run much quicker to get out of the way. A whole family of them was hanging out in the downtown park but ran off when a small child got close. Who knows what will be next?
+        </p>
+    </div>
+
+    <div class="escape-timeline" id="timeline">
+        <h2 class="all-escape" id="all-animals">Escape Timeline</h2>
+        <ul class="animal-timeline" id="list">
+            <li>February 21st - Alarm failure</li>
+            <li>February 22nd - Monkeys escape</li>
+            <li>March 1st - Cityville residents begin reporting poo showers</li>
+            <li>March 5th - Zookeepers attempt then fail at capturing Monkeys</li>
+            <li>March 7th - Giraffes escape in the early morning hours right before rush hour traffic</li>
+            <li>March 10th - Giraffe sighting in Downtown Park</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
+    <script>
+        "use strict";
+        $(document).ready(function() {
+
+        // $('.codeup').css('border', 'solid red 1px');
+            $("li").css("font-size", "20px");
+            $("p, h1, li").css("background-color", "grey");
+            // $("h1").css("background-color", "grey");
+            // $("li").css("background-color", "grey");
+
+            alert($("h1").text());
+        });
 
     </script>
 </body>
