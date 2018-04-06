@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Attributes & CSS</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt class="clickit">1. Who pays for the upkeep of national parks?</dt>
+            <dd>Funds come from the federal government for upkeep. Those funds are an allocated portion of taxes per year.</dd>
+        <dt class="clickit">2. Do I have to pay to get into a national park?</dt>
+            <dd>Most parks have an entry fee. Some parks charge per person and others are by vehicle. The parks that charge by vehicle count the number of axles on a vehicle for the price.</dd>
+        <dt class="clickit">3. Can I camp at a national park?</dt>
+            <dd>You can camp at a national park but it must be within the park guidelines. Some are open year round and others are closed after dark so entering and exiting will not be possible once the sun goes down.</dd>
+        <dt class="clickit">4. Can I hunt at a national park?</dt>
+            <dd>Most national parks do not allow hunting except during hunting season. Whatever animals are allowed to be hunted are usually those species that need to be kept in check. Check the individual park for further details.</dd>
+        <dt class="clickit">5. Are national parks ever closed?</dt>
+            <dd>The larger parks are always open - every day. However, many close at sundown so that you may not enter after that or before the sun comes up.</dd>
+        <dt class="clickit">6. What is the longest amount of time I can camp at one?</dt>
+            <dd>Each time you camp it requires a permit. And the length of time allowed is different for each park. However, you cannot just permanently camp somewhere. You will be rousted out.</dd>
+        <dt class="clickit">7. Does every state have a national park?</dt>
+            <dd>Most states do have a national park - or at least a part of one.</dd>
+        <dt class="clickit">8. Do any states share a national park?</dt>
+            <dd>Utah and California share Yosemite. Colorado, New Mexico and two other states share the Grand Canyon. So, yes - multiple states share a park.</dd>
+        <dt class="clickit">9. What is the largest national park?</dt>
+            <dd>Yosemite is the largest park. It includes mountains and rivers and spans several states.</dd>
+        <dt class="clickit">10. What is the smallest national park?</dt>
+            <dd>I have no idea what the smallest national park is. That is a good question. Why not google it?</dd>
+    </dl>
+
+    <div></div>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        $('dd').addClass('invisible');
+        $('div').html('<a href="#" id="Toggle">' + 'Toggle' + '</a>');
+
+        $('#Toggle').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+
+        $('.clickit').click(function () {
+            event.preventDefault();
+            $('this').css('background-color', 'yellow');
+        });
+
+
+
+    </script>
+</body>
+</html>
