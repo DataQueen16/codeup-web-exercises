@@ -48,14 +48,23 @@
     <script>
         "use strict";
         $(document).ready(function() {
+            $('h1').click(function () {
+                $('h1').css('background-color', 'grey');
+            });
 
-        // $('.codeup').css('border', 'solid red 1px');
-            $("li").css("font-size", "20px");
-            $("p, h1, li").css("background-color", "grey");
-            // $("h1").css("background-color", "grey");
-            // $("li").css("background-color", "grey");
+            $('p').dblclick(function () {
+                $('p').css('font-size', '18px');
+            });
 
-            alert($("h1").text());
+            $('li').hover(
+                function () {
+                    $(this).css('color', 'red');
+                },
+                function () {
+                    $(this).css('color', 'black');
+                }
+            );
+
         });
 
     </script>
