@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="ajax-table-style.css">
+</head>
+<body>
+
+<button type="button" id="refresh" name="Refresh">Refresh Tools</button>
+
+<h1>My Tool Store</h1>
+
+<table id="products" class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<script>
+(function() {
+    "use strict";
+    function onError(jqXHR, status, message) {
+        console.log(jqXHR, status, message);
+    }
+    // TODO: Create an ajax GET request for /data/inventory.json
+    var request = $.ajax("data/inventory.json");
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+    // "title": "Hammer",
+    //     "quantity": 25,
+    //     "categories": [
+    //     "tool"
+    // ],
+    //     "price": 20
+    request.done(function (response) {
+        console.log(response);
+        response.forEach(function (product) {
+            $('#insertProducts').append('<tr><td>' + product.title + '</td><td>' + product.quantity + '</td><td>' + product.categories + '</td><td>' + product.price + '</td></tr>');
+        });
+    });
+    request.fail(onError);
+
+    $('#refresh').click(function () {
+        console.log(request);
+        return request;
+    })
+
+})();
+</script>
+
+</body>
+</html>
