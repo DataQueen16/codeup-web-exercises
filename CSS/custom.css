@@ -15,3 +15,7 @@
 .footer {
     float: right;
 }
+
+.list-margin {
+    padding: 0 0 0 20px;
+}

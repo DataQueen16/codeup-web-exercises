@@ -45,16 +45,16 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs active" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" href="#size" data-toggle="tab" role="tab" aria-controls="nav-size" aria-selected="true">
+                                <a class="nav-link card-link" href="#size" data-toggle="tab" role="tab" aria-controls="nav-size" aria-selected="true">
                                     <span class="badge badge-light">1</span>
                                     Size and crust</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#cheese" data-toggle="tab" role="tab" aria-controls="nav-cheese" aria-selected="true">
+                                <a class="nav-link card-link" href="#cheese" data-toggle="tab" role="tab" aria-controls="nav-cheese" aria-selected="true">
                                     <span class="badge badge-light">2</span>
                                     Cheese and Sauce</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item card-link">
                                 <a class="nav-link" href="#toppings" data-toggle="tab" role="tab" aria-controls="nav-toppings" aria-selected="true">
                                     <span class="badge badge-light">3</span>
                                     Toppings</a>
@@ -66,7 +66,7 @@
 
         <div class="row">
             <div class="container tab-content">
-                <div class="card">
+                        <div class="card" id="#size">
                     <h5 class="card-header p-3 mb-2 bg-info">Choose size and crust</h5>
                     <div class="card-body" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
                         <div class="card">
@@ -115,7 +115,7 @@
 
         <!-- Cheese & Sauce Card -->
         <div class="container">
-            <div class="card">
+            <div class="card" id="#cheese">
                 <h5 class="card-header p-3 mb-2 bg-info">Choose cheese and sauce</h5>
                 <div class="card-body">
                     <ul class="list-group card-text card-header">
@@ -176,25 +176,25 @@
         <div class="row">
             <div class="container">
                 <h5 class="card-header p-3 mb-2 bg-info">Choose toppings</h5>
-                <div class="card">
+                <div class="card" id="#toppings">
                     <div class="card-body">
                         <ul class="list-group card-text card-header">
                             <li class="list-group-item">Choose Meats</li>
                             <li class="list-group-item form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="beef">  Beef</label>
+                                    <input class="form-check-input list-margin" type="checkbox" name="beef">  Beef</label>
                             </li>
                             <li class="list-group-item form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="ham">  Ham</label>
+                                    <input class="form-check-input list-margin" type="checkbox" name="ham">  Ham</label>
                             </li>
                             <li class="list-group-item form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="philly-steak">  Philly Steak</label>
+                                    <input class="form-check-input list-margin" type="checkbox" name="philly-steak">  Philly Steak</label>
                             </li>
                             <li class="list-group-item form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="bacon">  Bacon</label>
+                                    <input class="form-check-input list-margin" type="checkbox" name="bacon">  Bacon</label>
                             </li>
                         </ul>
                     </div>
