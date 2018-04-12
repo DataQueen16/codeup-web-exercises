@@ -5,10 +5,25 @@
     <title>Map</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/weather_style.css">
 </head>
 <body>
 
     <div id="display" class="row"></div>
+
+    <div id="coordinates" class="container">
+        <h4>Please enter your desired location by latitude and longitude below:</h4>
+        <label>
+            Latitude: <input type="text" placeholder="lat" id="lat">
+        </label><br>
+        <label>
+            Longitude: <input type="text" placeholder="long" id="long">
+        </label><br>
+        <label>
+            <input type="submit" id="input">
+        </label>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -18,28 +33,44 @@
         (function () {
             "use strict";
 
-        var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-            APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-            q: "San Antonio",
-            lat:    29.423017,
-            lon:   -98.48527,
-            units: "imperial",  //gives back fahrenheit instead of kelvin
-            cnt: 3
+        function getWeather(lat, lon) {
+
+
+            var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+                lat: lat,
+                lon: lon,
+                units: "imperial",  //gives back fahrenheit instead of kelvin
+                cnt: 3
             });
 
-        request.done(function (response) {
-            console.log(response);
-            $('#display').append('<div class="container bg-info border border-dark"><h1>' + 'Weather Application' + '</h1>' + '<h2>' + 'San Antonio' + '</h2></div>');
+            request.done(function (response) {
+                $('#display').html('');
 
-            response.list.forEach(function (daily, i) {
-                console.log(daily);
-                $('#display').append('<div id="today" class="container bg-light border border-dark col">' + '<span><h4>' + daily.temp.max + '°/' + daily.temp.min + '°</span><br>' + '<label href="http://openweathermap.org/img/w/[icon].png"></label>' + '<p>' + daily.weather[0].main + '</p>' + '<p>' + 'Humidity: ' + daily.humidity + '</p>' + '<p>' + 'Wind: ' + daily.speed + '</p>' + '<p>' + 'Pressure: ' + daily.pressure + '</p>' + '</h4></div>');
+                $('#display').append('<div class="container-fluid bg-info border border-dark"><h1>' + 'Weather Application'
+                    + '</h1><h2>' + response.city.name + '</h2></div><br>');
+
+                response.list.forEach(function (daily, i) {
+                    var imageUrl = "https://openweathermap.org/img/w/" + daily.weather[0].icon + ".png";
+                    $('#display').append('<div id="today" class="container bg-light border border-dark col text-center">'
+                        + '<span><h4>' + daily.temp.max + '°/' + daily.temp.min + '°</span><br>'
+                        + '<img src="' + imageUrl + '">'
+                        + '<p>' + daily.weather[0].main + ":  " + daily.weather[0].description
+                        + '</p><p>' + 'Humidity:  ' + daily.humidity + "%"
+                        + '</p><p>' + 'Wind:  ' + daily.speed + " mph"
+                        + '</p><p>' + 'Pressure:  ' + daily.pressure + " mb"
+                        + '</p></h4></div>');
+                })
             })
-        })
+        }
 
-            // response.forEach(function (blog) {
-            //     $('#posts').append('<div class="container"><h2>' + blog.title + '</h2>' + '<span>' + blog.date + '</span>' + '<p>' + blog.content + '</p>' + '<footer>' + blog.categories + '</footer></div><br>');
-            // })
+        getWeather(29.423017, -98.48527);
+
+            $('#input').click(function (event) {
+                var lat = $('#lat').val();
+                var long = $('#long').val();
+                getWeather(lat, long);
+            })
         })();
     </script>
 </body>
