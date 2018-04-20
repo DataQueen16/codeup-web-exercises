@@ -31,7 +31,7 @@ const users = [
 
 const name = 'jennifer';
 const email = 'dataqueen16@gmail.com';
-const languages = ['java, c++, javascript'];
+const languages = ['java', 'c++', 'javascript', 'html', 'css', 'jquery'];
 
 // const name = 'monica';
 
