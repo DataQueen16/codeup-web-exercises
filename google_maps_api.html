@@ -78,19 +78,19 @@
             } else {
                 alert("Geocoding was not successful - STATUS: " + status);
             }
-
-            var restaurants = [
-                {address: "9921 Frontage Rd, San Antonio, TX, 78230"},
-                {address: "22410 US Hwy 281 N, San Antonio, TX, 78259"},
-                {address: "849 E Commerce St, San Antonio, TX, 78205"}
-            ];
-
-            restaurants.forEach(function (address){
-                //setInterval instead of foreach
-                geocoder.geocode(address, function (results, status) {
-                    callback(results, status, address);
-                });
-            });
+            //
+            // var restaurants = [
+            //     {address: "9921 Frontage Rd, San Antonio, TX, 78230"},
+            //     {address: "22410 US Hwy 281 N, San Antonio, TX, 78259"},
+            //     {address: "849 E Commerce St, San Antonio, TX, 78205"}
+            // ];
+            //
+            // restaurants.forEach(function (address){
+            //     //setInterval instead of foreach
+            //     geocoder.geocode(address, function (results, status) {
+            //         callback(results, status, address);
+            //     });
+            // });
 
 
         }
