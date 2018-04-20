@@ -33,8 +33,24 @@ const users = [
 
 
 
-var threeOrMore = users.filter(function(users) {
+let threeOrMore = users.filter(function(users) {
     return users.languages.length >= 3;
 });
 console.log(threeOrMore);
 
+
+let userEmails = users.map(function (users) {
+    return users.email;
+});
+
+console.log(userEmails);
+
+
+// keys are ids and the values are objects that represent each user
+
+let idObject = users.reduce((Ids, user) => {
+    Ids[user.id] = user;
+    return Ids;
+}, {});
+
+console.log(idObject);
